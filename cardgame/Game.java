@@ -18,7 +18,6 @@ public class Game {
 
   public void addPlayer(Player player) {
     players.add(player);
-    System.out.println("player added");
   }
 
   public int countPlayers() {
