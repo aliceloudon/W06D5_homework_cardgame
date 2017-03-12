@@ -46,11 +46,11 @@ public class GameTest {
     assertEquals(52, game.countCards());
   }
 
-  // @Test
-  // public void deckHas52Cards(){
-  //   Card card = game.getRandomCard().toString;
-  //   System.out.println(card);
-  //   assertEquals(52, game.countCards());
-  // }
+  @Test
+  public void canSeeCards(){
+    game.addCardsToDeck(card);
+    game.printDeck();
+    assertEquals(52, game.countCards());
+  }
 
 }

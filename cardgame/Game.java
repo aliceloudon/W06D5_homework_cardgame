@@ -41,6 +41,11 @@ public class Game {
 
   // Here (above) we are iterating through all of our CardValues and CardSuits in order to match them up with each other. (CardValue.values and CardSuit.values)
 
+  public void printDeck(){
+    for (Card card : deck)
+      System.out.println(card.getCardValue() + " of " + card.getCardSuit());
+  }
+
   public int countCards() {
     return deck.size();
   }
@@ -58,18 +63,6 @@ public class Game {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // public void shuffleCards() {
 //   System.out.println("Shuffling cards!");
 // }
@@ -77,11 +70,6 @@ public class Game {
 // public void dealCards() {
 //   System.out.println("Dealing cards!");
 // }
-
-
-
-
-
 
 // Iterator cardIterator = deck.iterator();
 // while (cardIterator.hasNext()) {
