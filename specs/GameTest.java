@@ -40,17 +40,22 @@ public class GameTest {
   @Test
   public void canAdd52CardsToDeck(){
     game.addCardsToDeck(card);
-    System.out.println(game.countCards());
-    System.out.println(game.getDeck());
-    System.out.println(game.getRandomCard());
     assertEquals(52, game.countCards());
   }
 
+  // @Test
+  // public void canPrintDeckAsString(){
+  //   game.addCardsToDeck(card);
+  //   game.printString();
+  //   assertEquals(52, game.countCards());
+  // }
+
   @Test
-  public void canSeeCards(){
+  public void canGetRandomCard(){
     game.addCardsToDeck(card);
-    game.printDeck();
+    game.getRandomCard();
     assertEquals(52, game.countCards());
   }
+
 
 }

@@ -41,7 +41,7 @@ public class Game {
 
   // Here (above) we are iterating through all of our CardValues and CardSuits in order to match them up with each other. (CardValue.values and CardSuit.values)
 
-  public void printDeck(){
+  public void printString(){
     for (Card card : deck)
       System.out.println(card.getCardValue() + " of " + card.getCardSuit());
   }
@@ -54,10 +54,17 @@ public class Game {
     return this.deck;
   }
 
-  public Card getRandomCard() {
+  // public Card getRandomCard() {
+  //   Collections.shuffle(this.deck);
+  //   return this.deck.get(0);
+  // }
+
+  public void getRandomCard() {
     Collections.shuffle(this.deck);
-    return this.deck.get(0);
+    Card randomCard = this.deck.get(0);
+    System.out.println(randomCard.getCardValue() + " of " + randomCard.getCardSuit());
   }
+
 
 }
 
