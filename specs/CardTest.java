@@ -9,17 +9,17 @@ public class CardTest {
   
   @Before 
   public void before(){
-    card = new Card(SuitType.HEARTS, ValueType.JACK);
+    card = new Card(CardValue.JACK, CardSuit.HEARTS);
   }
 
   @Test
   public void canGetSuit(){
-    assertEquals(SuitType.HEARTS, card.getSuit());
+    assertEquals(CardSuit.HEARTS, card.getCardSuit());
   }
 
   @Test
   public void canGetValue(){
-    assertEquals(ValueType.JACK, card.getValue());
+    assertEquals(CardValue.JACK, card.getCardValue());
   }
 
 }

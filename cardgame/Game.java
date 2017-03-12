@@ -10,6 +10,14 @@ public class Game {
     this.name = name;
     this.players = new ArrayList<Player>();
     this.deck = new ArrayList<Card>();
+      for (int i=0; i<13; i++) {
+        CardValue value = CardValue.values()[i];
+      for (int j=0; j<4; j++) {
+        Card card = new Card(value, CardSuit.values()[j]);
+    this.deck.add(card);
+        }
+      }
+      // Here we are iterating through all of our CardValues and CardSuits in order to match them up with each other. (CardValue.values and CardSuit.values)
   }
 
   public String getName() {
@@ -42,8 +50,25 @@ public class Game {
     System.out.println("Dealing cards!");
   }
 
+  public ArrayList<Card> getDeck() {
+    return this.deck;
+  }
+
+  public Card getRandomCard() {
+    Collections.shuffle(this.deck);
+    return this.deck.get(0);
+  }
+
+
+
+  // Iterator cardIterator = deck.iterator();
+  // while (cardIterator.hasNext()) {
+  //   Card randomCard = cardIterator.next();
+  //   System.out.println(randomCard.getValue() + " of " + randomCard.getSuit());
+  // }
+
+
+
 }
-
-
 
 // .ordinal --> Use for position the enum is in

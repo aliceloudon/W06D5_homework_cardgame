@@ -2,20 +2,20 @@ package cardgame;
 
 public class Card {
 
-  private SuitType suit;
-  private ValueType value;
+  private CardValue value;
+  private CardSuit suit;
 
-  public Card(SuitType suit, ValueType value) { 
-    this.suit = suit;
+  public Card(CardValue value, CardSuit suit) { 
     this.value = value;
+    this.suit = suit;
   }
 
-  public SuitType getSuit(){
-    return this.suit;
-  }
-
-  public ValueType getValue(){
+  public CardValue getCardValue(){
     return this.value;
+  }
+
+  public CardSuit getCardSuit(){
+    return this.suit;
   }
 
 }

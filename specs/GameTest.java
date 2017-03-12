@@ -13,7 +13,7 @@ public class GameTest {
   public void before(){
     game = new Game("Blackjack");
     player = new Player("Player 1");
-    card = new Card(SuitType.DIAMONDS, ValueType.QUEEN); 
+    card = new Card(CardValue.QUEEN, CardSuit.DIAMONDS); 
   }
 
   @Test
@@ -27,15 +27,10 @@ public class GameTest {
   }
 
   @Test
-  public void canAddPlayerToGame(){
-    game.addPlayer(player);
-    assertEquals(1, game.countPlayers());
-  }
-
-  @Test
-  public void canAddCardToGame(){
-    game.addCard(card);
-    assertEquals(1, game.countCards());
+  public void deckHas52Cards(){
+    Card card = game.getRandomCard().toString;
+    System.out.println(card);
+    assertEquals(52, game.countCards());
   }
 
 }
