@@ -50,12 +50,25 @@ public class GameTest {
   //   assertEquals(52, game.countCards());
   // }
 
+  // @Test
+  // public void canGetRandomCard(){
+  //   game.addCardsToDeck(card);
+  //   game.getRandomCard();
+  //   assertEquals(52, game.countCards());
+  // }
+
   @Test
-  public void canGetRandomCard(){
+  public void canRemoveCardFromDeck(){
     game.addCardsToDeck(card);
-    game.getRandomCard();
-    assertEquals(52, game.countCards());
+    game.getRandomCardAndRemoveItFromDeck();
+    assertEquals(51, game.countCards());
   }
 
+  @Test
+  public void canDealCardToPlayer(){
+    game.addCardsToDeck(card);
+    game.dealRandomCardToPlayer(player);
+    assertEquals(1, player.countCards());
+  }
 
 }

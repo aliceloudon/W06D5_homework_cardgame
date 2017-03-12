@@ -41,11 +41,6 @@ public class Game {
 
   // Here (above) we are iterating through all of our CardValues and CardSuits in order to match them up with each other. (CardValue.values and CardSuit.values)
 
-  public void printString(){
-    for (Card card : deck)
-      System.out.println(card.getCardValue() + " of " + card.getCardSuit());
-  }
-
   public int countCards() {
     return deck.size();
   }
@@ -54,10 +49,10 @@ public class Game {
     return this.deck;
   }
 
-  // public Card getRandomCard() {
-  //   Collections.shuffle(this.deck);
-  //   return this.deck.get(0);
-  // }
+  public void printString(){
+    for (Card card : deck)
+      System.out.println(card.getCardValue() + " of " + card.getCardSuit());
+  }
 
   public void getRandomCard() {
     Collections.shuffle(this.deck);
@@ -65,6 +60,26 @@ public class Game {
     System.out.println(randomCard.getCardValue() + " of " + randomCard.getCardSuit());
   }
 
+  public void getRandomCardAndRemoveItFromDeck() {
+    Collections.shuffle(this.deck);
+    Card randomCard = this.deck.get(0);
+    this.deck.remove(randomCard);
+  }
+
+  public void dealRandomCardToPlayer(Player player){
+    Collections.shuffle(this.deck);
+    Card randomCard = this.deck.get(0);
+    this.deck.remove(randomCard);
+    System.out.println(randomCard.getCardValue() + " of " + randomCard.getCardSuit());
+    players.add(player);
+    player.addCard(randomCard);
+  }
+
+// QUESTION: I am repeating myself here... but if I don't explixitly write out the method to get a random card, I no longer have the variable 'randomCard' to add to the player.
+
+  public void determineWinner(){
+    
+  }
 
 }
 
