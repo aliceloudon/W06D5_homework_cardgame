@@ -10,10 +10,14 @@ public class Runner {
     game.addPlayer(player1);
     game.addPlayer(player2);
 
-    game.getRandomCard();
+    // game.getRandomCard();
 
-    game.shuffleCards();
-    game.dealCards();
+    // game.shuffleCards();
+    // game.dealCards();
+
+    // game.printDeck();
+
+    
 
   }
 

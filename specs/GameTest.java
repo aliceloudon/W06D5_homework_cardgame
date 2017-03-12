@@ -27,10 +27,28 @@ public class GameTest {
   }
 
   @Test
-  public void deckHas52Cards(){
-    Card card = game.getRandomCard().toString;
-    System.out.println(card);
+  public void canAddPlayer(){
+    game.addPlayer(player);
+    assertEquals(1, game.countPlayers());
+  }
+
+  @Test
+  public void deckStartsEmpty(){
+    assertEquals(0, game.countCards());
+  }
+
+  @Test
+  public void canAdd52CardsToDeck(){
+    game.addCardsToDeck(card);
+    System.out.println(game.countCards());
     assertEquals(52, game.countCards());
   }
+
+  // @Test
+  // public void deckHas52Cards(){
+  //   Card card = game.getRandomCard().toString;
+  //   System.out.println(card);
+  //   assertEquals(52, game.countCards());
+  // }
 
 }
