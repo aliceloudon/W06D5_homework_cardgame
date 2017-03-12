@@ -45,6 +45,15 @@ public class Game {
     return deck.size();
   }
 
+  public ArrayList<Card> getDeck() {
+    return this.deck;
+  }
+
+  public Card getRandomCard() {
+    Collections.shuffle(this.deck);
+    return this.deck.get(0);
+  }
+
 }
 
 
@@ -69,14 +78,8 @@ public class Game {
 //   System.out.println("Dealing cards!");
 // }
 
-// public ArrayList<Card> getDeck() {
-//   return this.deck;
-// }
 
-// public Card getRandomCard() {
-//   Collections.shuffle(this.deck);
-//   return this.deck.get(0);
-// }
+
 
 
 

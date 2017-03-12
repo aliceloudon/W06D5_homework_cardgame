@@ -41,6 +41,8 @@ public class GameTest {
   public void canAdd52CardsToDeck(){
     game.addCardsToDeck(card);
     System.out.println(game.countCards());
+    System.out.println(game.getDeck());
+    System.out.println(game.getRandomCard());
     assertEquals(52, game.countCards());
   }
 
