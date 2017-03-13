@@ -14,12 +14,23 @@ public class Runner {
     game.addPlayer(player2);
     System.out.println("Added Player 2");
 
-    System.out.println("There are currently " + game.countPlayers() + " players in this game.");
+    System.out.println("There are " + game.countPlayers() + " players in the game.");
 
     game.addCardsToDeck(card);
-    System.out.println("There are currently " + game.countCards() + " cards in the deck.");
+    System.out.println("There are " + game.countCards() + " cards in the deck.");
 
-    
+    System.out.println("Player 1 has been dealt the ");
+    game.dealRandomCardToPlayer(player1);
+    player1.printHand();
+
+    System.out.println("Player 2 has been dealt the ");
+    game.dealRandomCardToPlayer(player2);
+    player2.printHand();
+
+    System.out.println("There are now " + game.countCards() + " cards in the deck.");    
+
+    player1.getValue();
+    player2.getValue();
 
   }
 

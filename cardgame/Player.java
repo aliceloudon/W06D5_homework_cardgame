@@ -22,4 +22,14 @@ public class Player {
     return hand.size();
   }
 
+  public void printHand(){
+    for (Card card : hand)
+      System.out.println(card.getCardValue() + " of " + card.getCardSuit());
+  }
+
+  public void getValue(){
+    for (Card card : hand)
+      System.out.println(card.getCardValue().getCardValue());
+  }
+
 }
